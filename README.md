@@ -33,20 +33,20 @@ Standard OpenClaw agents frequently suffer from "Context Amnesia" or paralyzing 
    - **Benefit:** Drastically reduces API token costs and ensures your multi-step agents never fail due to standard context limitations.
 
 ### 🎓 [Education-Skills](./Education-Skills/) 
-*In Active Development*
+*Live & Ready for Deployment*
 
 A suite of highly specialized skills tailored for the modern learning environment.
-- **Personalized AI Tutors**: Subject-specific pedagogical agents.
-- **Automated Grading Interfaces**: Skills designed to structurally parse, analyze, and provide feedback on assignments.
-- **Curriculum Synthesizers**: Context-aware systems for generating long-form study plans.
+- **Personalized AI Tutors**: Subject-specific pedagogical agents (`khan-tutor`).
+- **Learning Management Integrations**: Skills designed to interface with platforms like Coursera and Moodle (`coursera-progress`, `duolingo-tracker`, `moodle-agent`).
+- **Curriculum & Study Tools**: Context-aware systems for organizing study plans and analyzing assignments (`quiz-generator`, `readability-analyzer`, `spaced-repetition`).
 
 ### 🏠 [Realestate-Skills](./Realestate-Skills/) 
-*In Active Development*
+*Live & Ready for Deployment*
 
 Enterprise-grade capabilities bridging autonomous agents with the property industry.
-- **Automated MLS Listing Analyzers**: Agents capable of actively probing market feeds and identifying pricing anomalies.
-- **Local Market Trend Profilers**: Continuous temporal monitoring of regional zoning and pricing dynamics.
-- **Smart Contract & Lease Generators**: Enclave-secured execution for drafting and legally structuring real estate documentation.
+- **Property Discovery & MLS**: Agents capable of actively probing market feeds (`zillow-search`, `rentcast-agent`).
+- **Property Management & Touring**: Tools for managing listings and site visits (`airbnb-manager`, `showing-scheduler`).
+- **Smart Contract & Lease Generators**: Enclave-secured execution for drafting and legally structuring real estate documentation (`lease-generator`).
 
 ---
 
