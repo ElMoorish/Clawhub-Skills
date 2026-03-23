@@ -10,17 +10,10 @@ description: >
   courses", "Coursera progress", "check my Coursera", "what's due on Coursera",
   "Coursera certificate", "online course progress", or "my enrollments".
 metadata:
-  clawdbot:
+  openclaw:
     requires:
       bins: ["curl", "python3"]
-      env:
-        - name: COURSERA_CLIENT_ID
-          description: "Coursera API client ID (see setup)"
-        - name: COURSERA_CLIENT_SECRET
-          description: "Coursera API client secret"
-        - name: COURSERA_ACCESS_TOKEN
-          description: "OAuth2 access token (generated from client credentials)"
-          optional: true
+      env: ["COURSERA_CLIENT_ID", "COURSERA_CLIENT_SECRET", "COURSERA_ACCESS_TOKEN"]
 ---
 
 # Coursera Progress Skill
@@ -174,7 +167,10 @@ For personal data (grades, certificates), credentials are required.
 import json, subprocess, os
 
 def get_enrollments(user_id):
-    token = os.environ["COURSERA_ACCESS_TOKEN"]
+    token = os.environ.get("COURSERA_ACCESS_TOKEN")
+    if not token:
+        raise ValueError("COURSERA_ACCESS_TOKEN environment variable is required for personal data access.")
+        
     r = subprocess.run(
         ["curl", "-s",
          f"https://api.coursera.com/api/enrollments.v1?userId={user_id}"
